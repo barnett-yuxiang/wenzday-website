@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wenzday | Lorene</title>
+    <meta
+      name="description"
+      content="A minimal, elegant welcome page for Lorene."
+    />
+    <style>
+      :root {
+        --bg-dark: #0b1120;
+        --bg-mid: #111b35;
+        --bg-soft: #18274a;
+        --text-main: #f7f9ff;
+        --text-soft: #b8c4e3;
+        --accent: #8fd7ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        min-height: 100svh;
+        min-height: 100dvh;
+        background:
+          radial-gradient(circle at 18% 20%, #2c4a91 0%, transparent 42%),
+          radial-gradient(circle at 82% 78%, #25437e 0%, transparent 46%),
+          linear-gradient(150deg, var(--bg-dark), var(--bg-mid) 48%, var(--bg-soft));
+        color: var(--text-main);
+        font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+        overflow: hidden;
+      }
+
+      .glow {
+        position: fixed;
+        inset: auto auto 12% 50%;
+        width: min(70vw, 700px);
+        height: min(70vw, 700px);
+        transform: translateX(-50%);
+        background: radial-gradient(circle, rgba(143, 215, 255, 0.24), transparent 62%);
+        filter: blur(14px);
+        pointer-events: none;
+      }
+
+      .stage {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 2.5rem 1.4rem 2.8rem;
+      }
+
+      .hero {
+        text-align: center;
+        max-width: 840px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3rem, 11vw, 7rem);
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 0.95;
+        text-wrap: balance;
+      }
+
+      h1 span {
+        font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      p {
+        margin: 1rem 0 0;
+        font-size: clamp(1rem, 3.2vw, 1.35rem);
+        color: var(--text-soft);
+        letter-spacing: 0.02em;
+      }
+
+      @media (max-width: 480px) {
+        .hero {
+          padding: 1.2rem;
+        }
+
+        p {
+          line-height: 1.55;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+    <div class="stage">
+      <main class="hero">
+        <h1>Hello, <span>Lorene</span>.</h1>
+        <p>I am your Wednesday System.</p>
+      </main>
+    </div>
+  </body>
+</html>
